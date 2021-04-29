@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+body, html{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #EFF1F3;
+}
+
+@media screen and (min-width: 1920px) and (max-width: 1920px) and (min-height: 1080px) and (max-height: 1080px){
+    /*Full HD*/
+}
+
+@media screen and (min-width: 3840px) and (max-width: 3840px) and (min-height: 2160px) and (max-height: 2160px){
+    /*4K*/
+}
+
+mat-expansion-panel div.mat-expansion-panel-body{
+    padding: 0 2px 16px !important;
+}
+mat-expansion-panel-header, .mat-expansion-panel-header:focus, .mat-expansion-panel-header:hover{
+    background: #ddd !important;
+
+}

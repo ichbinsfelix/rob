@@ -1,0 +1,12 @@
+<table >
+    <tr>
+        <td *ngFor="let message of serverMessages" [class.remove]="message.hidden">
+            <mat-card>
+                <mat-card-title>Room {{message.room}} booked by {{message.organizer}}</mat-card-title>
+                <mat-card-subtitle *ngIf="message.start && message.end">
+                    From {{message.start | date:'HH:mm'}} to {{message.end | date:'HH:mm'}}
+                </mat-card-subtitle>
+            </mat-card>
+        </td>
+    </tr>
+</table>

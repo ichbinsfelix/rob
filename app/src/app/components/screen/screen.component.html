@@ -1,0 +1,28 @@
+<rob-navigation
+    [floor]="floor"
+    [(search)]="search"
+    (filterChange)="filter=$event"
+></rob-navigation>
+
+<div class="main">
+    <div class="flex-container">
+        <rob-map
+            *ngIf="roomService.rooms"
+            [floor]="floor + ''"
+            [search]="search"
+            [select]="select"
+            [goto]="goto"
+            (mapClicked)="mapClicked($event)"
+        ></rob-map>
+        <rob-search
+            *ngIf="search"
+            [filter]="filter"
+            [select]="roomId"
+            (searchAndSelect)="selectElement($event)"
+            (searchAndGoto)="gotoElement($event)"
+        ></rob-search>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,14 @@
+{
+    "/api/*": {
+        "target": "https://wapp-azuredevelopment01-01.azurewebsites.net",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+    },
+    "/socket.io/*": {
+        "target": "ws://wapp-azuredevelopment01-01.azurewebsites.net",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+    }
+}

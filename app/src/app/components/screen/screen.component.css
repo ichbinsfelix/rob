@@ -1,0 +1,48 @@
+:host{
+    height: 85vh;
+    display: block;
+    width: 100vw;
+    position: absolute;
+    top: 15vh;
+    left: 0;
+}
+
+.main{
+    height: 79vh;
+    display: block;
+    overflow: hidden;
+}
+
+rob-navigation{
+    height: 6vh;
+    display: block;
+    padding-left: 1vh;
+    padding-right: 1vh;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    padding: 1vh;
+    overflow: hidden;
+}
+
+rob-map{
+    flex-grow: 2;
+    overflow: hidden;
+}
+
+rob-search{
+    height: 79vh;
+    padding-left: 1vh;
+}
+@media screen and (min-width: 1920px) and (max-width: 1920px) and (min-height: 1080px) and (max-height: 1080px){
+    /*Full HD*/
+    :host{
+        top: 15vh;
+    }
+}
+
+@media screen and (min-width: 3840px) and (max-width: 3840px) and (min-height: 2160px) and (max-height: 2160px){
+    /*4K*/
+}

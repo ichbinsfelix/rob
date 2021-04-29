@@ -1,0 +1,40 @@
+<div class="flex-container">
+
+    <div *ngIf="floors" class="flex-container building">
+        <img *ngFor="let flo of floors | reverseFloors"
+             [style.height]="6 / floors.length + 'vh'"
+             [src]="'assets/images/btnFloor'  +
+                    (flo.id-1 === 0 ? 'Ground' : '') +
+                    (flo.id-1 === floor ? '_selected' : '') +
+                    '.png'"
+             routerLink="/{{flo.id-1}}"
+             alt="floor_{{flo.id-1}}">
+    </div>
+
+    <div class="flex-container-floors">
+        <button *ngFor="let flo of floors"
+                mat-raised-button
+                color="primary"
+                class="floorBtns"
+                [class.selected]="flo.id-1 === floor"
+                routerLink="/{{flo.id-1}}">
+            {{flo.name}}
+        </button>
+
+        <div *ngIf="search" class="search">
+            <form>
+                <mat-form-field>
+                    <input matInput name="searchfield" placeholder="Search" [(ngModel)]="filter"
+                           (input)="filterChanged()">
+                </mat-form-field>
+            </form>
+            <button mat-icon-button (click)="showHideSearch()">
+                <mat-icon>clear</mat-icon>
+            </button>
+        </div>
+    </div>
+
+    <button *ngIf="!search" mat-raised-button color="primary" class="search" (click)="showHideSearch()">
+        <mat-icon class="searchIcon">search</mat-icon>
+    </button>
+</div>

@@ -1,0 +1,27 @@
+<mat-card>
+    <mat-accordion [multi]="!!filter">
+        <rob-search-panel *ngIf="roomService.rooms"
+                          [title]="'Rooms'"
+                          [default]="true"
+                          [multi]="!!filter"
+                          [links]="roomService.rooms | filterRooms:filter"
+                          [select]="select"
+                          (panelSearch)="selectRoom($event)"
+                          (panelDoubleClick)="bookRoom($event)"
+        ></rob-search-panel>
+        <rob-search-panel *ngIf="roomService.employees"
+                          [title]="'Employees'"
+                          [multi]="!!filter"
+                          [links]="roomService.employees | filterEmployees:filter"
+                          (panelSearch)="selectEmployee($event)"
+                          (panelDoubleClick)="gotoEmployee($event)"
+        ></rob-search-panel>
+        <rob-search-panel *ngIf="roomService.departments"
+                          [title]="'Departments'"
+                          [multi]="!!filter"
+                          [links]="roomService.departments | filterDepartments:filter"
+                          (panelSearch)="selectDepartment($event)"
+                          (panelDoubleClick)="gotoDepartment($event)"
+        ></rob-search-panel>
+    </mat-accordion>
+</mat-card>

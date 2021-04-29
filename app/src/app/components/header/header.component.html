@@ -1,0 +1,19 @@
+<div class="container">
+    <p class="warning">resolution not supported: {{resolution}}</p>
+    <div class="content">
+        <div class="left displayBase">
+            <img (click)="onClick()" src="../../../assets/images/logo_subpages.svg" alt="logo">
+            <h1>Super Corp.</h1>
+            <h1>Room Overview Board</h1>
+            <h1>{{time}} {{date}}</h1>
+        </div>
+        <div class="right displayBase">
+            <rob-message></rob-message>
+        </div>
+        <svg height=8 width=100vw>
+            <line x1="0" y1="0" x2="3840" y2="0" style="stroke:rgb(250,195,0);stroke-width:8" />
+        </svg>
+    </div>
+</div>
+
+

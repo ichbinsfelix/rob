@@ -1,0 +1,43 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$palette-bfhApp: (
+    50: #fef8e0,
+    100: #feedb3,
+    200: #fde180,
+    300: #fcd54d,
+    400: #fbcc26,
+    500: #fac300,
+    600: #f9bd00,
+    700: #f9b500,
+    800: #f8ae00,
+    900: #f6a100,
+    A100: #ffffff,
+    A200: #fff7ea,
+    A400: #ffe3b7,
+    A700: #ffd99d,
+    contrast: (
+        50: black,
+        100: black,
+        200: black,
+        300: black,
+        400: black,
+        500: black,
+        600: black,
+        700: black,
+        800: black,
+        900: black,
+        A100: black,
+        A200: black,
+        A400: black,
+        A700: black,
+    )
+);
+
+$my-app-primary: mat-palette($palette-bfhApp,50);
+$my-app-accent:  mat-palette($palette-bfhApp,500);
+$my-app-warn:    mat-palette($mat-red,400);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+
+@include angular-material-theme($my-app-theme);

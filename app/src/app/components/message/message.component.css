@@ -1,0 +1,68 @@
+mat-card-title {
+    font-size: 0.7vw;
+    text-align: center;
+}
+
+mat-card-subtitle {
+    font-size: 0.7vw;
+    text-align: center;
+}
+
+mat-card {
+    align-content: center;
+    width: 12vh;
+    height: 6vh;
+    display: block;
+    margin-left: 1vh;
+    background: #697D91;
+}
+
+table {
+    float: right;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    max-width: 70vw;
+}
+
+td {
+    animation: fadeIn 2s linear;
+}
+
+td.remove {
+    animation: fadeOut 2s linear;
+    opacity: 0;
+    max-width: 0;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        max-width: 200px
+    }
+    50% {
+        opacity: 0;
+        max-width: 200px
+    }
+    100% {
+        opacity: 0;
+        max-width: 0
+    }
+}
+
+@media screen and (min-width: 1920px) and (max-width: 1920px) and (min-height: 1080px) and (max-height: 1080px) {
+    /*Full HD*/
+}
+
+@media screen and (min-width: 3840px) and (max-width: 3840px) and (min-height: 2160px) and (max-height: 2160px) {
+    /*4K*/
+}

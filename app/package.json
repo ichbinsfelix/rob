@@ -1,0 +1,48 @@
+{
+    "name": "rob",
+    "version": "1.0.1",
+    "scripts": {
+        "ng": "ng",
+        "start": "ng serve",
+        "start:dev": "ng serve --proxy-config=dev-proxy.conf.json",
+        "bundle": "ng build --prod --stats-json && webpack-bundle-analyzer dist/rob/stats.json",
+        "build": "ng build --prod",
+        "test": "npm run lint",
+        "lint": "ng lint"
+    },
+    "private": true,
+    "dependencies": {
+        "@angular/animations": "^11.0.9",
+        "@angular/cdk": "^11.2.1",
+        "@angular/common": "~11.0.1",
+        "@angular/compiler": "~11.0.1",
+        "@angular/core": "~11.0.1",
+        "@angular/forms": "~11.0.1",
+        "@angular/material": "^11.2.1",
+        "@angular/platform-browser": "~11.0.1",
+        "@angular/platform-browser-dynamic": "~11.0.1",
+        "@angular/router": "~11.0.1",
+        "d3": "^6.6.0",
+        "ngx-socket-io": "^3.3.0",
+        "rxjs": "~6.6.0",
+        "zone.js": "~0.10.2"
+    },
+    "devDependencies": {
+        "@angular-devkit/build-angular": "~0.1100.2",
+        "@angular/cli": "~11.0.2",
+        "@angular/compiler-cli": "~11.0.1",
+        "@types/d3": "^6.3.0",
+        "webpack-bundle-analyzer": "^4.4.0",
+        "@angular-eslint/builder": "1.2.0",
+        "eslint": "^7.6.0",
+        "@angular-eslint/eslint-plugin": "1.2.0",
+        "@angular-eslint/eslint-plugin-template": "1.2.0",
+        "@angular-eslint/schematics": "1.2.0",
+        "@angular-eslint/template-parser": "1.2.0",
+        "@typescript-eslint/eslint-plugin": "4.3.0",
+        "@typescript-eslint/parser": "4.3.0",
+        "eslint-plugin-import": "2.22.1",
+        "eslint-plugin-jsdoc": "30.7.6",
+        "eslint-plugin-prefer-arrow": "1.2.2"
+    }
+}

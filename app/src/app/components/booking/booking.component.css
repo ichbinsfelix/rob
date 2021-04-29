@@ -1,0 +1,35 @@
+mat-dialog-content {
+    padding: 10px;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+button.bookDefault {
+    padding: 15px;
+    margin: 2px;
+    min-width: 70px;
+    max-width: 80px;
+    min-height: 70px;
+    max-height: 70px;
+}
+
+mat-icon.close {
+    float: right;
+}
+
+mat-card {
+    margin: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, .2);
+}
+
+mat-card-title > sup {
+    float: right;
+}
+
+mat-dialog-actions > button {
+    margin: auto;
+    padding: 10px;
+}

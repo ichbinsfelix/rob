@@ -1,0 +1,25 @@
+<mat-expansion-panel
+    [class.multi]="multi"
+    [(expanded)]="expanded"
+    [disabled]="links.length<1">
+    <mat-expansion-panel-header>
+        <mat-panel-title>{{title}}</mat-panel-title>
+        <mat-panel-description>{{links.length}}</mat-panel-description>
+    </mat-expansion-panel-header>
+    <div *ngIf="links" class="content">
+        <button *ngFor="let link of links" mat-raised-button class="li-btn" color="primary"
+                [class.selected]="select === link.id"
+                (dblclick)="doubleClick(link)"
+                (click)="searchLink(link)">
+            {{link.displayName}}
+            <mat-icon *ngIf="link.isMeetingRoom"
+                      class="meeting"
+                      [class.available]="link.currentlyAvailable"
+                      (click)="doubleClick(link)">
+                book_online
+            </mat-icon>
+            <mat-icon *ngIf="!link.isMeetingRoom" (click)="doubleClick(link)">arrow_forward</mat-icon>
+        </button>
+    </div>
+</mat-expansion-panel>
+

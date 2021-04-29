@@ -1,0 +1,38 @@
+<mat-icon class="close" (click)="close()">clear</mat-icon>
+<h2 mat-dialog-title>Book Adhoc Meeting</h2>
+
+<mat-dialog-content *ngIf="!booking" [formGroup]="form">
+    <mat-card>
+        <mat-card-title>{{room.displayName}}<sup>Capacity: {{room.capacity}}</sup></mat-card-title>
+        <mat-card-subtitle>Media: {{room.media}}</mat-card-subtitle>
+
+        <mat-form-field class="full-wi">
+            <input matInput
+                   name="meetingName"
+                   placeholder="Meeting name"
+                   formControlName="name">
+        </mat-form-field>
+        <footer>
+            <button *ngFor="let min of bookingButtons"
+                    [disabled]="room.currentlyAvailable < 1"
+                    mat-raised-button
+                    color="primary"
+                    class="bookDefault"
+                    (click)="book(min)">
+                {{min}} min
+            </button>
+        </footer>
+    </mat-card>
+
+</mat-dialog-content>
+
+<ng-container *ngIf="booking">
+    <mat-dialog-content>
+        <span>Are you sure that you want to book this room?</span>
+    </mat-dialog-content>
+
+    <mat-dialog-actions>
+        <button mat-raised-button color="accent" (click)="save()">Yes</button>
+        <button mat-raised-button color="warn" (click)="close()">No</button>
+    </mat-dialog-actions>
+</ng-container>
